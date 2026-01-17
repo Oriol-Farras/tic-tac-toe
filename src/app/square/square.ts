@@ -1,11 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-square',
-  imports: [],
-  templateUrl: './square.html',
-  styleUrl: './square.scss',
+  template: `
+    <p>
+      {{ value }}
+    </p>
+  `,
+  styles: [],
 })
-export class Square {
-
+export class SquareComponent {
+  @Input() value?: 'X' | 'O';
 }

@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Square } from './square/square';
+import { SquareComponent } from './square/square';
+import { BoardComponent } from './board/board';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Square],
+  imports: [RouterOutlet, SquareComponent, BoardComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
