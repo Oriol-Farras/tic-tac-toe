@@ -1,15 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { SquareComponent } from "../square/square";
 import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { SquareComponent } from '../square/square';
+import { GetClassPipe } from '../pipes/get-class.pipe';
 
 @Component({
   selector: 'app-board',
+  standalone: true,
+  imports: [CommonModule, MatButtonModule, MatCardModule, SquareComponent, GetClassPipe],
   templateUrl: './board.html',
-  styleUrls: ['./board.scss'],
-  imports: [SquareComponent, CommonModule]
+  styleUrls: ['./board.scss']
 })
 export class BoardComponent implements OnInit {
-  squares: any[] = Array(9).fill(null);
+  squares: any[] = [];
   xIsNext: boolean = true;
   winner: string | null = null;
 
@@ -26,12 +30,12 @@ export class BoardComponent implements OnInit {
   get player() {
     return this.xIsNext ? 'X' : 'O';
   }
+
   makeMove(idx: number) {
     if (!this.squares[idx] && !this.winner) {
       this.squares.splice(idx, 1, this.player);
       this.xIsNext = !this.xIsNext;
     }
-
     this.winner = this.calculateWinner();
   }
 
