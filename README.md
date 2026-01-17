@@ -1,59 +1,101 @@
-# TicTacToe
+# ❌⭕ Tic Tac Toe - Angular Edition
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.0.
+![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![Angular Material](https://img.shields.io/badge/Angular%20Material-%233F51B5.svg?style=for-the-badge&logo=angular&logoColor=white)
+![License](https://img.shields.io/badge/license-MIT-green.svg?style=for-the-badge)
 
-## Development server
+A modern, responsive implementation of the classic Tic-Tac-Toe game built with **Angular 17+** and **Angular Material**. This project demonstrates the use of modern Angular features such as **Standalone Components** and custom Pipes.
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## 🚀 Live Demo
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Play the game directly in your browser:
+### 👉 [Click here to Play](https://oriol-farras.github.io/tic-tac-toe/)
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## ✨ Features
 
-```bash
-ng generate component component-name
-```
+*   **Interactive UI:** Clean and responsive interface using Angular Material Cards and Buttons.
+*   **Game Logic:** Automatic win detection and turn switching.
+*   **Dynamic Styling:** Custom Pipe integration to dynamically style 'X' (Blue) and 'O' (Pink).
+*   **Modern Architecture:** Built entirely without `NgModules`, utilizing the new **Standalone Component** APIs.
+*   **Reset Function:** Ability to restart the game at any time without reloading the page.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🛠️ Tech Stack
 
-```bash
-ng generate --help
-```
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17+.
 
-## Building
+| Technology | Usage |
+| :--- | :--- |
+| **Angular (Core)** | Frontend Framework (Standalone approach) |
+| **TypeScript** | Strong typing and game logic |
+| **Angular Material** | UI Components (Cards, Buttons, Theming) |
+| **SCSS** | Custom styling and layouts (Grid/Flexbox) |
+| **GitHub Pages** | Deployment and hosting |
 
-To build the project run:
+## 📂 Project Structure
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+The project follows a component-based architecture:
 
 ```bash
-ng e2e
+src/app
+├── 📂 board         # Smart component: Handles game state and logic
+├── 📂 square        # Dumb component: Renders individual cells
+├── 📂 pipes         # Custom pipe for dynamic styling
+└── 📄 main.ts       # Application entry point
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 🔧 Installation & Running Locally
 
-## Additional Resources
+Clone the repository and install the dependencies to run the game on your machine.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1.  **Clone the repo:**
+    ```bash
+    git clone https://github.com/Oriol-Farras/tic-tac-toe.git
+    ```
+
+2.  **Navigate to the project folder:**
+    ```bash
+    cd tic-tac-toe
+    ```
+
+3.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+4.  **Run the development server:**
+    ```bash
+    ng serve
+    ```
+
+5.  **Open your browser:**
+    Navigate to `http://localhost:4200/`.
+
+## 💡 What I Learned
+
+This project served as a practical exercise to master:
+*   Creating and using **Angular Standalone Components**.
+*   Passing data via `@Input` decorators.
+*   Handling user events (`(click)` bindings).
+*   Creating custom **Pipes** (`GetClassPipe`) for data transformation in templates.
+*   Implementing **Structural Directives** (`*ngIf`, `*ngFor`).
+*   Deploying Angular applications to **GitHub Pages**.
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+Feel free to check the [issues page](https://github.com/Oriol-Farras/tic-tac-toe/issues).
+
+## 📝 License
+
+This project is [MIT](LICENSE) licensed.
+
+---
+
+<div align="center">
+  <sub>Built with ❤️ by <a href="https://github.com/Oriol-Farras">Oriol Farràs</a></sub>
+</div>
